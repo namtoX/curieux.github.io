@@ -1,13 +1,12 @@
-/* Couleurs thème "Engineering Blue" */
+/* ===== Variables & Base ===== */
 :root {
-    --primary: #2A5C82;    /* Bleu profond */
-    --secondary: #4CAF50;  /* Vert pour accents */
-    --accent: #FFC107;     /* Or pour highlights */
-    --background: #0A192F; /* Fond nuit professionnel */
-    --text: #E0E0E0;       /* Texte clair */
+    --primary: #2A5C82;
+    --secondary: #4CAF50;
+    --accent: #FFC107;
+    --background: #0A192F;
+    --text: #E0E0E0;
 }
 
-/* Réinitialisation et polices */
 * {
     margin: 0;
     padding: 0;
@@ -24,111 +23,82 @@ body {
     min-height: 100vh;
 }
 
-/* En-tête holographique */
-header {
-    background: rgba(10, 25, 47, 0.8);
-    padding: 2rem;
-    text-align: center;
-    border-bottom: 3px solid var(--accent);
-    box-shadow: 0 0 20px rgba(74, 144, 226, 0.3);
+/* ===== Navigation Cyberpunk ===== */
+.cyber-nav {
+    background: rgba(10, 25, 47, 0.95);
+    padding: 1rem 2rem;
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid var(--accent);
 }
 
-header h1 {
+.cyber-nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.cyber-nav a {
+    color: var(--text);
+    text-decoration: none;
     font-family: 'Orbitron', sans-serif;
-    font-size: 2.5rem;
-    color: var(--accent);
-    text-shadow: 0 0 10px rgba(255, 193, 7, 0.5);
+    padding: 0.5rem 1rem;
+    transition: all 0.3s;
+    border-radius: 5px;
 }
 
-/* Cartes de contenu en verre */
-.fiche, .post-card {
+.cyber-nav a:hover {
+    background: var(--primary);
+    box-shadow: 0 0 15px var(--primary);
+}
+
+/* ===== Hero Section ===== */
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    border-bottom: 3px solid var(--accent);
+}
+
+.hero h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    color: var(--accent);
+    text-shadow: 0 0 20px rgba(255, 193, 7, 0.5);
+    margin-bottom: 1rem;
+}
+
+/* ===== Fiches Styles ===== */
+.fiche {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
     border-radius: 15px;
     padding: 2rem;
-    margin: 2rem 0;
+    margin: 2rem auto;
+    max-width: 800px;
     border: 1px solid rgba(74, 144, 226, 0.3);
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s;
 }
 
 .fiche:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Effet néon pour les titres */
-h2 {
-    color: var(--primary);
+.fiche h2 {
+    color: var(--secondary);
     font-family: 'Orbitron', sans-serif;
-    position: relative;
-    display: inline-block;
-    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    border-left: 4px solid var(--accent);
+    padding-left: 1rem;
 }
 
-h2::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 50px;
-    height: 3px;
-    background: var(--accent);
-    box-shadow: 0 0 10px var(--accent);
-}
-
-/* Animations entrée */
-@keyframes slideIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.fiche {
-    animation: slideIn 0.6s ease-out;
-}
-
-/* Boutons futuristes */
-button, .btn {
-    background: var(--primary);
-    color: white;
-    border: none;
-    padding: 0.8rem 1.5rem;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: all 0.3s;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: bold;
-}
-
-button:hover {
-    background: var(--secondary);
-    box-shadow: 0 0 15px var(--secondary);
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-    body {
-        padding: 1rem;
-    }
-    
-    .fiche {
-        padding: 1rem;
-    }
-}
-.cyber-nav {
-    background: rgba(10, 25, 47, 0.95);
-    padding: 1rem 2rem;
-    position: sticky;
-    top: 0;
-    backdrop-filter: blur(10px);
-    z-index: 1000;
-}
-
-.glowing-text {
-    animation: glow 2s ease-in-out infinite alternate;
-}
-
+/* ===== Animations ===== */
 @keyframes glow {
     from { text-shadow: 0 0 5px var(--accent); }
     to { text-shadow: 0 0 20px var(--accent); }
+}
+
+.glow {
+    animation: glow 1.5s ease-in-out infinite alternate;
 }

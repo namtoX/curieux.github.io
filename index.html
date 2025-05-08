@@ -1,10 +1,59 @@
-<nav class="cyber-nav">
-    <div class="nav-logo">
-        <span class="glowing-text">The Oth man</span>
-    </div>
-    <ul>
-        <li><a href="#fiches">Fiches</a></li>
-        <li><a href="#projets">Projets</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Notes - Othman</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="cyber-nav">
+        <ul>
+            <li><a href="#accueil" class="glow">Accueil</a></li>
+            <li><a href="#fiches">Fiches</a></li>
+            <li><a href="#projets">Projets</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>🚀 NOTES D'INGÉNIERIE</h1>
+        <p>Par Othman EL ISSAOUI - Génie Civil & Innovations</p>
+    </section>
+
+    <!-- Fiches Container -->
+    <main class="container">
+        <!-- Exemple de fiche -->
+        <article class="fiche">
+            <h2>Ponts Métalliques</h2>
+            <p>Concepts clés : flambement, assemblages boulonnés...</p>
+            <img src="images/pont-metal.jpg" alt="Schéma pont" style="width:100%; margin-top:1rem;">
+            <button class="btn-gloss">Voir les détails</button>
+        </article>
+
+        <!-- Autre fiche -->
+        <article class="fiche">
+            <h2>Mécanique des Sols</h2>
+            <p>Principe de Terzaghi, tassements...</p>
+            <div class="mermaid">
+                <!-- Diagramme Mermaid ici -->
+            </div>
+        </article>
+    </main>
+
+    <script>
+        // Script simple pour l'effet glow
+        document.querySelectorAll('.fiche').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                card.style.boxShadow = `
+                    ${(e.clientX - card.offsetLeft) / 10}px 
+                    ${(e.clientY - card.offsetTop) / 10}px 
+                    20px rgba(74, 144, 226, 0.2)
+                `;
+            });
+        });
+    </script>
+</body>
+</html>
