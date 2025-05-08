@@ -1,59 +1,36 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Engineering Notes - Othman</title>
+    <title>Othman - Génie Civil</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="cyber-nav">
-        <ul>
-            <li><a href="#accueil" class="glow">Accueil</a></li>
-            <li><a href="#fiches">Fiches</a></li>
-            <li><a href="#projets">Projets</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <div class="container">
+        <header>
+            <h1>🚧 Othman EL ISSAOUI</h1>
+            <p>Étudiant en Génie Civil | Passionné par les ouvrages d'art</p>
+        </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>🚀 NOTES D'INGÉNIERIE</h1>
-        <p>Par Othman EL ISSAOUI - Génie Civil & Innovations</p>
-    </section>
+        <nav class="navbar">
+            <a href="Avancement.html" class="nav-link"><i class="fas fa-tasks"></i> Suivi de stage</a>
+            <a href="EC.html" class="nav-link"><i class="fas fa-book"></i> Eurocodes</a>
+            <a href="Terminoogie.html" class="nav-link"><i class="fas fa-bridge"></i> Terminologie</a>
+        </nav>
 
-    <!-- Fiches Container -->
-    <main class="container">
-        <!-- Exemple de fiche -->
-        <article class="fiche">
-            <h2>Ponts Métalliques</h2>
-            <p>Concepts clés : flambement, assemblages boulonnés...</p>
-            <img src="images/pont-metal.jpg" alt="Schéma pont" style="width:100%; margin-top:1rem;">
-            <button class="btn-gloss">Voir les détails</button>
-        </article>
+        <div class="grid">
+            <!-- Cartes cliquables -->
+            <a href="EC.html" class="post-card">
+                <h2>📐 Eurocodes 0 & 1</h2>
+                <p>Comparatif détaillé des normes structurales...</p>
+            </a>
 
-        <!-- Autre fiche -->
-        <article class="fiche">
-            <h2>Mécanique des Sols</h2>
-            <p>Principe de Terzaghi, tassements...</p>
-            <div class="mermaid">
-                <!-- Diagramme Mermaid ici -->
-            </div>
-        </article>
-    </main>
-
-    <script>
-        // Script simple pour l'effet glow
-        document.querySelectorAll('.fiche').forEach(card => {
-            card.addEventListener('mousemove', (e) => {
-                card.style.boxShadow = `
-                    ${(e.clientX - card.offsetLeft) / 10}px 
-                    ${(e.clientY - card.offsetTop) / 10}px 
-                    20px rgba(74, 144, 226, 0.2)
-                `;
-            });
-        });
-    </script>
+            <a href="Terminoogie.html" class="post-card">
+                <h2>🌉 Anatomie d'un pont</h2>
+                <p>Glossaire visuel des composants clés...</p>
+            </a>
+        </div>
+    </div>
 </body>
 </html>
