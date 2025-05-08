@@ -1,62 +1,42 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Génie Civil</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <title>Mon Site de Génie Civil</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="container">
-            <a href="#" class="logo">🏗️ CivilPortfolio</a>
-            <div class="nav-links">
-                <a href="#accueil">Accueil</a>
-                <a href="#apropos">À propos</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </div>
-    </nav>
+  <header>
+    <h1>Génie Civil Café</h1>
+  </header>
 
-    <!-- Section Accueil -->
-    <section id="accueil" class="hero">
-        <div class="container">
-            <h1 class="fade-in">Othman EL ISSAOUI</h1>
-            <p class="fade-in">Étudiant en Génie Civil - Passionné par les ouvrages d'art</p>
-            <a href="#apropos" class="btn fade-in">En savoir plus</a>
-        </div>
-    </section>
+  <main>
+    <div class="nav-grid">
+      <a href="EC.html" class="nav-card">
+        <h2><i class="fas fa-bridge"></i> Eurocodes</h2>
+        <p>Les normes européennes expliquées simplement</p>
+      </a>
+      
+      <a href="Terminoogie.html" class="nav-card">
+        <h2><i class="fas fa-drafting-compass"></i> Terminologie</h2>
+        <p>Le vocabulaire technique décrypté</p>
+      </a>
+    </div>
 
-    <!-- Section À propos -->
-    <section id="apropos" class="about">
-        <div class="container">
-            <img src="profil.jpg" alt="Profil" class="profile-img float">
-            <div class="about-text slide-up">
-                <h2>À propos de moi</h2>
-                <p>Je suis étudiant en génie civil spécialisé dans les ouvrages d'art. Mon travail se concentre sur l'application des Eurocodes et l'analyse des structures complexes.</p>
-            </div>
-        </div>
-    </section>
+    <div class="article-card">
+      <h3>Dernières Actualités</h3>
+      <img src="images/pont-modern.jpg" class="parallax-img" alt="Pont moderne">
+      <p>Nouvelle méthode de calcul des charges...</p>
+    </div>
+  </main>
 
-    <!-- Section Contact -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Contact</h2>
-            <p>📧 othman@example.com</p>
-            <div class="social-links">
-                <a href="https://twitter.com" target="_blank">🐦 Twitter</a>
-                <a href="https://github.com" target="_blank">💻 GitHub</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>© 2024 Othman EL ISSAOUI. Tous droits réservés.</p>
-        </div>
-    </footer>
+  <footer>
+    <div class="coffee-animation">
+      <div class="coffee-cup"></div>
+      <div class="steam"></div>
+    </div>
+    <p>☕ Fait avec passion et beaucoup de café</p>
+  </footer>
 </body>
 </html>
