@@ -80,3 +80,25 @@
     </script>
 </body>
 </html>
+<script>
+    // Effet curseur personnalisé
+    document.body.addEventListener('mousemove', (e) => {
+      const cursor = document.createElement('div');
+      cursor.style.position = 'fixed';
+      cursor.style.width = '20px';
+      cursor.style.height = '20px';
+      cursor.style.background = `radial-gradient(circle, 
+        ${getRandomColor()} 0%, 
+        transparent 70%)`;
+      cursor.style.borderRadius = '50%';
+      cursor.style.pointerEvents = 'none';
+      cursor.style.transform = `translate(${e.clientX-10}px, ${e.clientY-10}px)`;
+      document.body.appendChild(cursor);
+      setTimeout(() => cursor.remove(), 500);
+    });
+  
+    function getRandomColor() {
+      const colors = ['#6a11ff', '#2575fc', '#ff6b6b'];
+      return colors[Math.floor(Math.random() * colors.length)];
+    }
+  </script>
