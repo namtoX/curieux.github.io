@@ -1,42 +1,64 @@
+<!-- File: index.html -->
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-  <title>Mon Site de Génie Civil</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notes Eurocodes & Stage Génie Civil</title>
+  <!-- Google Fonts: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/your_kit_id.js" crossorigin="anonymous"></script>
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <header>
-    <h1>Génie Civil Café</h1>
+  <header class="hero">
+    <nav class="navbar">
+      <h1 class="logo">Génie Civil Hub</h1>
+      <ul class="nav-links">
+        <li><a href="EC.html">Eurocodes</a></li>
+        <li><a href="Avancement.html">Avancement de Stage</a></li>
+        <li><a href="Terminologie.html">Terminologie</a></li>
+      </ul>
+    </nav>
+    <div class="hero-content">
+      <h2 class="gradient-text">Eurocodes & Suivi de Stage</h2>
+      <p>Notes techniques, lexique visuel et journal de bord de stage en génie civil.</p>
+    </div>
   </header>
 
   <main>
-    <div class="nav-grid">
-      <a href="EC.html" class="nav-card">
-        <h2><i class="fas fa-bridge"></i> Eurocodes</h2>
-        <p>Les normes européennes expliquées simplement</p>
-      </a>
-      
-      <a href="Terminoogie.html" class="nav-card">
-        <h2><i class="fas fa-drafting-compass"></i> Terminologie</h2>
-        <p>Le vocabulaire technique décrypté</p>
-      </a>
-    </div>
-
-    <div class="article-card">
-      <h3>Dernières Actualités</h3>
-      <img src="images/pont-modern.jpg" class="parallax-img" alt="Pont moderne">
-      <p>Nouvelle méthode de calcul des charges...</p>
-    </div>
+    <section class="cards-section">
+      <div class="card" onclick="location.href='EC.html'">
+        <i class="fas fa-book fa-3x icon-float"></i>
+        <h3>Eurocodes 0 & 1</h3>
+        <p>Résumé des normes et formules clés.</p>
+      </div>
+      <div class="card" onclick="location.href='Avancement.html'">
+        <i class="fas fa-clipboard-list fa-3x icon-float"></i>
+        <h3>Suivi de Stage</h3>
+        <p>Journal hebdomadaire et objectifs.</p>
+      </div>
+      <div class="card" onclick="location.href='Terminologie.html'">
+        <i class="fas fa-bridge fa-3x icon-float"></i>
+        <h3>Terminologie des Ponts</h3>
+        <p>Lexique illustré pour ingénieurs.</p>
+      </div>
+    </section>
   </main>
 
   <footer>
-    <div class="coffee-animation">
-      <div class="coffee-cup"></div>
-      <div class="steam"></div>
-    </div>
-    <p>☕ Fait avec passion et beaucoup de café</p>
+    <p>&copy; 2025 Génie Civil Hub. Tous droits réservés.</p>
   </footer>
+
+  <!-- Optional JS for parallax effect -->
+  <script>
+    document.addEventListener('scroll', function() {
+      const scrolled = window.pageYOffset;
+      document.querySelector('.hero').style.backgroundPositionY = -(scrolled * 0.3) + 'px';
+    });
+  </script>
 </body>
 </html>
+
