@@ -1,106 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-    <!-- ... métadonnées existantes ... -->
-    <style>
-        :root {
-            --space-cadet: #2A2A45;
-            --royal-blue: #4062BB;
-            --tropical-indigo: #6B8FDD;
-            --uranian-blue: #B3E0FF;
-        }
-
-        body {
-            background: linear-gradient(
-                45deg,
-                var(--space-cadet),
-                var(--royal-blue),
-                var(--tropical-indigo)
-            );
-            min-height: 100vh;
-            overflow-x: hidden;
-            position: relative;
-        }
-
-        /* Particules flottantes */
-        .particle {
-            position: absolute;
-            background: rgba(255,255,255,0.1);
-            border-radius: 50%;
-            animation: float 15s infinite linear;
-        }
-
-        @keyframes float {
-            0% { transform: translateY(0) rotate(0deg); }
-            100% { transform: translateY(-100vh) rotate(360deg); }
-        }
-
-        /* Grille géométrique animée */
-        .grid-pattern {
-            position: fixed;
-            width: 200vw;
-            height: 200vh;
-            background-image: 
-                linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
-            background-size: 40px 40px;
-            animation: gridMove 20s linear infinite;
-            pointer-events: none;
-        }
-
-        @keyframes gridMove {
-            from { transform: translate(-50%, -50%) rotate(15deg); }
-            to { transform: translate(-50%, -50%) rotate(15deg) translateX(-40px); }
-        }
-
-        /* Effet "Blueprints" */
-        .blueprint-overlay {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            background-image: url('https://www.transparenttextures.com/patterns/blueprint.png');
-            opacity: 0.1;
-            pointer-events: none;
-        }
-
-        /* Élément héroïque */
-        .hero {
-            position: relative;
-            background: radial-gradient(
-                circle at 50% 100%,
-                rgba(107, 142, 255, 0.3),
-                transparent 60%
-            );
-            backdrop-filter: blur(20px);
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Othman EL ISSAOUI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Particules dynamiques générées par JS -->
-    <script>
-        // Crée 50 particules aléatoires
-        for(let i = 0; i < 50; i++) {
-            const particle = document.createElement('div');
-            particle.className = 'particle';
-            particle.style.cssText = `
-                width: ${Math.random() * 5 + 2}px;
-                height: ${Math.random() * 5 + 2}px;
-                left: ${Math.random() * 100}%;
-                animation-duration: ${Math.random() * 10 + 10}s;
-                opacity: ${Math.random() * 0.5 + 0.2};
-            `;
-            document.body.appendChild(particle);
-        }
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">OEI</a>
+            <ul class="nav-links">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#apropos">À propos</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-        // Ajoute la grille géométrique
-        const grid = document.createElement('div');
-        grid.className = 'grid-pattern';
-        document.body.appendChild(grid);
+    <!-- Section Accueil -->
+    <section id="accueil" class="hero">
+        <div class="container">
+            <h1>Othman EL ISSAOUI</h1>
+            <p class="subtitle">Étudiant en Génie Civil spécialisé en ouvrages d'art</p>
+            <a href="#apropos" class="cta-button">Découvrir mon travail</a>
+        </div>
+    </section>
 
-        // Ajoute l'effet blueprint
-        const blueprint = document.createElement('div');
-        blueprint.className = 'blueprint-overlay';
-        document.body.appendChild(blueprint);
-    </script>
+    <!-- Section À propos -->
+    <section id="apropos" class="about">
+        <div class="container">
+            <div class="about-content">
+                <img src="https://via.placeholder.com/400x400" alt="Photo de profil" class="profile-img">
+                <div class="about-text">
+                    <h2>À propos de moi</h2>
+                    <p>Passionné par la conception et l'analyse des structures complexes, je me spécialise dans l'application des normes Eurocodes pour les ouvrages d'art. Actuellement en stage chez OTEIS, je développe des compétences en modélisation structurelle et analyse de charges.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <p class="email">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:contact@example.com">contact@example.com</a>
+                </p>
+                <div class="social-links">
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 Othman EL ISSAOUI. Tous droits réservés.</p>
+        </div>
+    </footer>
 </body>
 </html>
