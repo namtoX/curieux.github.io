@@ -1,36 +1,82 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-    <title>Othman - Génie Civil</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Othman - Ingénieur Civil</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!-- Bibliothèque d'animation -->
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>🚧 Othman EL ISSAOUI</h1>
-            <p>Étudiant en Génie Civil | Passionné par les ouvrages d'art</p>
-        </header>
-
-        <nav class="navbar">
-            <a href="Avancement.html" class="nav-link"><i class="fas fa-tasks"></i> Suivi de stage</a>
-            <a href="EC.html" class="nav-link"><i class="fas fa-book"></i> Eurocodes</a>
-            <a href="Terminoogie.html" class="nav-link"><i class="fas fa-bridge"></i> Terminologie</a>
-        </nav>
-
-        <div class="grid">
-            <!-- Cartes cliquables -->
-            <a href="EC.html" class="post-card">
-                <h2>📐 Eurocodes 0 & 1</h2>
-                <p>Comparatif détaillé des normes structurales...</p>
-            </a>
-
-            <a href="Terminoogie.html" class="post-card">
-                <h2>🌉 Anatomie d'un pont</h2>
-                <p>Glossaire visuel des composants clés...</p>
-            </a>
-        </div>
+    <!-- Loader animé -->
+    <div class="loader">
+        <div class="hexagon"></div>
     </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+            <h1 class="title-gradient">🚀 Passion Génie Civil</h1>
+            <p class="subtitle">Étudiant ingénieur | Conception d'ouvrages d'art | Eurocodes</p>
+            <a href="#articles" class="cta-button">Explorer mes notes</a>
+        </div>
+        <div class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Grid des Articles -->
+    <section id="articles" class="articles-grid">
+        <div class="grid-item" data-aos="zoom-in">
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-bridge-water"></i>
+                </div>
+                <h3>Ponts &amp; Viaducs</h3>
+                <p>Analyse structurelle des ouvrages d'art...</p>
+                <a href="Terminoogie.html" class="card-link">En savoir plus →</a>
+            </div>
+        </div>
+
+        <div class="grid-item" data-aos="zoom-in" data-aos-delay="200">
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-calculator"></i>
+                </div>
+                <h3>Eurocodes</h3>
+                <p>Comparatif EC0/EC1 vs Fascicule 61...</p>
+                <a href="EC.html" class="card-link">Voir l'étude →</a>
+            </div>
+        </div>
+
+        <div class="grid-item" data-aos="zoom-in" data-aos-delay="400">
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-hard-hat"></i>
+                </div>
+                <h3>Chantiers</h3>
+                <p>Journal de bord de mon stage...</p>
+                <a href="Avancement.html" class="card-link">Suivre →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Citation -->
+    <section class="quote-section" data-aos="fade-up">
+        <blockquote>
+            "Un bon ingénieur fait simple. Un excellent ingénieur rend simple ce qui est complexe."
+            <cite>- Gustave Eiffel</cite>
+        </blockquote>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true }); // Initialise les animations au scroll
+        window.addEventListener('load', () => {
+            document.querySelector('.loader').style.display = 'none';
+        });
+    </script>
 </body>
 </html>
