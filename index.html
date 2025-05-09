@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Notes Eurocodes & Stage Génie Civil</title>
-  <!-- Google Fonts: Inter -->
+  <title>Génie Civil Hub</title>
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/your_kit_id.js" crossorigin="anonymous"></script>
@@ -13,22 +14,24 @@
 </head>
 <body>
   <header class="hero">
-    <nav class="navbar">
-      <h1 class="logo">Génie Civil Hub</h1>
-      <ul class="nav-links">
-        <li><a href="EC.html">Eurocodes</a></li>
-        <li><a href="Avancement.html">Avancement de Stage</a></li>
-        <li><a href="Terminologie.html">Terminologie</a></li>
-      </ul>
-    </nav>
-    <div class="hero-content">
-      <h2 class="gradient-text">Eurocodes & Suivi de Stage</h2>
-      <p>Notes techniques, lexique visuel et journal de bord de stage en génie civil.</p>
+    <div class="container">
+      <nav class="navbar">
+        <h1 class="logo">Génie Civil Hub</h1>
+        <ul class="nav-links">
+          <li><a href="EC.html">Eurocodes</a></li>
+          <li><a href="Avancement.html">Stage</a></li>
+          <li><a href="Terminologie.html">Terminologie</a></li>
+        </ul>
+      </nav>
+      <div class="hero-content">
+        <h2 class="hero-title">Eurocodes & Suivi de Stage</h2>
+        <p class="hero-subtitle">Notes techniques, lexique visuel et journal de bord de stage en génie civil.</p>
+      </div>
     </div>
   </header>
 
-  <main>
-    <section class="cards-section">
+  <main class="main-content">
+    <section class="cards-section container">
       <div class="card" onclick="location.href='EC.html'">
         <i class="fas fa-book fa-3x icon-float"></i>
         <h3>Eurocodes 0 & 1</h3>
@@ -47,18 +50,20 @@
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Génie Civil Hub. Tous droits réservés.</p>
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Génie Civil Hub. Tous droits réservés.</p>
+    </div>
   </footer>
 
-  <!-- JS pour effets d'icônes et parallaxe -->
   <script>
     // Parallaxe
-    document.addEventListener('scroll', function() {
+    document.addEventListener('scroll', function () {
       const scrolled = window.pageYOffset;
       document.querySelector('.hero').style.backgroundPositionY = -(scrolled * 0.3) + 'px';
     });
-    // Décalage d'animation des icônes
+
+    // Animation des icônes
     const icons = document.querySelectorAll('.icon-float');
     icons.forEach((icon, idx) => {
       icon.style.animationDelay = `${idx * 0.3}s`;
